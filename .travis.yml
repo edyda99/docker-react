@@ -9,3 +9,8 @@ before_install:
 
 script:
   - docker run -e CI=true big-ed/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-west-2
+  app: docker 

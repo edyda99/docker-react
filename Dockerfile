@@ -8,6 +8,4 @@ COPY node_modules .
 RUN npm install
 # COPY . .
 RUN npm run build
-
-FROM nginx
-COPY --from=builder usr/app/build /usr/share/nginx
+EXPOSE 30000
